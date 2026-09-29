@@ -1,0 +1,5 @@
+sku_id,grade,pack_type,description
+SKU-OPC-BAG,OPC,Bag,"OPC, 50 kg bags"
+SKU-PPC-BAG,PPC,Bag,"PPC, 50 kg bags"
+SKU-PSC-BAG,PSC,Bag,"PSC, 50 kg bags"
+SKU-PPC-BULK,PPC,Bulk,"PPC, bulk tanker"

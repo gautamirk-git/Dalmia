@@ -1,0 +1,4 @@
+plant_id,plant_name,region,has_rail_siding
+PLANT-A,Plant A,Central,N
+PLANT-C,Plant C,Central,Y
+PLANT-E,Plant E,Central,N

@@ -1,0 +1,6 @@
+warehouse_id,warehouse_name,type,district,region
+WH-B,Warehouse B,Warehouse,District-C1,Central
+WH-F,Warehouse F,Warehouse,District-C3,Central
+WH-G,Warehouse G,Warehouse,District-C5,Central
+DEPOT-D,Rail Depot D,Rail Depot,District-C2,Central
+DEPOT-H,Rail Depot H,Rail Depot,District-C6,Central

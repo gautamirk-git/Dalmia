@@ -1,0 +1,16 @@
+dealer_id,dealer_name,district,region,service_tier
+DLR-01,Dealer 01,District-C1,Central,Strategic
+DLR-02,Dealer 02,District-C2,Central,Standard
+DLR-03,Dealer 03,District-C3,Central,Preferred
+DLR-04,Dealer 04,District-C4,Central,Standard
+DLR-05,Dealer 05,District-C5,Central,Strategic
+DLR-06,Dealer 06,District-C6,Central,Preferred
+DLR-07,Dealer 07,District-C7,Central,Preferred
+DLR-08,Dealer 08,District-C8,Central,Standard
+DLR-09,Dealer 09,District-C1,Central,Standard
+DLR-10,Dealer 10,District-C2,Central,Standard
+DLR-11,Dealer 11,District-C3,Central,Preferred
+DLR-12,Dealer 12,District-C4,Central,Strategic
+DLR-13,Dealer 13,District-C5,Central,Standard
+DLR-14,Dealer 14,District-C6,Central,Strategic
+DLR-15,Dealer 15,District-C7,Central,Strategic
