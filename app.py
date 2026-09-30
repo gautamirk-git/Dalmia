@@ -198,6 +198,30 @@ PAGE = r"""<!doctype html>
   .legend .l1::before{border-color:#16a34a}.legend .l2::before{border-color:#64748b}.legend .l3::before{border-color:#dc2626;border-top-style:dashed}
   footer{font-size:12px;color:var(--muted);padding:0 0 30px}
   details summary{cursor:pointer;font-weight:600}
+  .land{padding:0;overflow:hidden}
+  .land-h{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff}
+  .land-h h2{margin:0;font-size:17px}.land-h small{display:block;color:#bfdbfe;font-weight:400;font-size:12px;margin-top:2px}
+  .land-h button{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:5px 12px;cursor:pointer;font-size:13px}
+  .strip{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;background:#f8fafc;border-bottom:1px solid var(--line)}
+  .strip div{flex:1 1 90px;text-align:center}.strip b{display:block;font-size:17px;color:var(--brand)}.strip span{font-size:11px;color:var(--muted)}
+  .lbody{padding:16px}
+  .cols{display:grid;grid-template-columns:1.25fr .8fr 1fr;gap:14px;align-items:stretch}
+  .colh{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}
+  .dom{border:1px solid var(--line);border-radius:10px;padding:7px 10px;margin-bottom:6px;background:#fff;position:relative}
+  .dom b{font-size:13px}.dom em{display:block;font-style:normal;font-size:11.5px;color:var(--muted)}
+  .dom .rel{display:block;font-size:11.5px;color:#1e3a8a;margin-top:2px}
+  .dom.poc{border-color:#86efac;background:var(--okbg)}
+  .dom.poc b::after{content:" \2605 POC 1";color:#15803d;font-size:11px;font-weight:700}
+  .hub{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-radius:14px;background:radial-gradient(circle at 50% 40%,#dbeafe,#eff6ff);border:1px solid #bfdbfe;padding:14px}
+  .hub svg{width:100%;max-width:200px}
+  .hub b{font-size:15px;color:#1e3a8a}.hub span{font-size:12px;color:#334155}
+  .outs .o{border-left:4px solid var(--brand);background:#f8fafc;border-radius:8px;padding:8px 10px;margin-bottom:8px;font-size:13px}
+  .outs .o.hi{border-color:var(--ok);background:var(--okbg)}
+  .outs .o small{display:block;color:var(--muted);font-size:11.5px}
+  .arrow{display:none;text-align:center;color:var(--brand);font-size:22px;line-height:1}
+  .msg{margin-top:12px;padding:10px 14px;border-radius:10px;background:#eef2ff;color:#1e293b;font-size:14px}
+  .fine{font-size:11.5px;color:var(--muted);margin-top:8px}
+  @media (max-width:800px){.cols{grid-template-columns:1fr}.arrow{display:block}}
 </style>
 </head>
 <body>
@@ -208,6 +232,59 @@ PAGE = r"""<!doctype html>
 <div class="notice"><div class="wrap">Illustrative demo. All data is synthetic and does not come from any company's systems. Source systems shown are <b>candidate systems, to be confirmed in discovery</b>.</div></div>
 
 <main><div class="wrap">
+  <section class="card land" id="land">
+    <div class="land-h"><div><h2>The bigger picture: one connected view across your domains</h2><small>Project Setu &middot; a leading Indian cement manufacturer &middot; built from public information</small></div><button id="landbtn" type="button">Hide</button></div>
+    <div id="landbody">
+      <div class="strip">
+        <div><b>15</b><span>plants</span></div><div><b>49.5 MTPA</b><span>cement capacity</span></div>
+        <div><b>8,600+</b><span>primary trucks</span></div><div><b>550+</b><span>warehouses</span></div>
+        <div><b>350+</b><span>districts served</span></div><div><b>2,900+</b><span>daily truck moves</span></div>
+        <div><b>10,015</b><span>active dealers</span></div>
+      </div>
+      <div class="lbody">
+        <div class="cols">
+          <div>
+            <div class="colh">1 &middot; Domains and systems they run today</div>
+            <div class="dom poc"><b>Logistics &amp; fulfillment</b><em>TMS, spot bidding, vehicle tracking, plant logistics</em><span class="rel">&rarr; order &rarr; stock &rarr; plant/warehouse &rarr; route &rarr; delivery</span></div>
+            <div class="dom poc"><b>Dealer / order ecosystem</b><em>Suvidha dealer app</em><span class="rel">&rarr; dealer &rarr; order &rarr; product &rarr; market</span></div>
+            <div class="dom poc"><b>Core ERP &amp; procurement</b><em>SAP (HANA), Ariba</em><span class="rel">&rarr; orders, materials, suppliers, operational entities</span></div>
+            <div class="dom poc"><b>Manufacturing / plant</b><em>Smart plant apps, paperless weighbridge, QR / geofencing</em><span class="rel">&rarr; capacity, constraints, plant state and change</span></div>
+            <div class="dom poc"><b>Data &amp; analytics</b><em>Data lake, BI, AI-driven analytics</em><span class="rel">&rarr; signals. DotIQ adds relationships, state, change, provenance</span></div>
+            <div class="dom"><b>Sales execution</b><em>Sales-force apps, Smart-D</em><span class="rel">&rarr; demand signals, account and territory context</span></div>
+            <div class="dom"><b>AI / automation</b><em>DIA bots, RPA</em><span class="rel">&rarr; consumers of DotIQ context and reasoning</span></div>
+            <div class="dom"><b>HR / workforce</b><em>Oracle HRIS, Nalanda learning</em><span class="rel">&rarr; future people, role and knowledge context</span></div>
+          </div>
+          <div>
+            <div class="arrow">&darr;</div>
+            <div class="colh" style="text-align:center">2 &middot; DotIQ</div>
+            <div class="hub">
+              <svg viewBox="0 0 200 170" aria-hidden="true">
+                <g stroke="#93c5fd" stroke-width="1.6">
+                  <line x1="100" y1="85" x2="30" y2="30"/><line x1="100" y1="85" x2="170" y2="30"/><line x1="100" y1="85" x2="20" y2="90"/>
+                  <line x1="100" y1="85" x2="180" y2="90"/><line x1="100" y1="85" x2="45" y2="145"/><line x1="100" y1="85" x2="155" y2="145"/>
+                  <line x1="30" y1="30" x2="20" y2="90"/><line x1="170" y1="30" x2="180" y2="90"/><line x1="45" y1="145" x2="155" y2="145"/>
+                </g>
+                <g fill="#1d4ed8"><circle cx="30" cy="30" r="9"/><circle cx="170" cy="30" r="9"/><circle cx="20" cy="90" r="8"/><circle cx="180" cy="90" r="8"/><circle cx="45" cy="145" r="9"/><circle cx="155" cy="145" r="9"/></g>
+                <circle cx="100" cy="85" r="20" fill="#16a34a"/><text x="100" y="89" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">DotIQ</text>
+              </svg>
+              <b>Context graph</b>
+              <span>relationships &middot; current state &middot; change &middot; source of every fact</span>
+            </div>
+          </div>
+          <div class="outs">
+            <div class="arrow">&darr;</div>
+            <div class="colh">3 &middot; What you get</div>
+            <div class="o hi"><b>POC 1: Intelligent Fulfillment</b><small>The best feasible path for an order, and why. Live in the demo below.</small></div>
+            <div class="o"><b>Explainable decisions</b><small>Every recommendation traces back to its source system.</small></div>
+            <div class="o"><b>Change awareness</b><small>Disruptions, stock and capacity changes flow into the answer.</small></div>
+            <div class="o"><b>Ready for more use cases</b><small>Same graph, next questions: demand, plant, dealer service.</small></div>
+          </div>
+        </div>
+        <div class="msg"><b>Your systems stay as they are.</b> DotIQ connects what they already know and reasons across it.</div>
+        <div class="fine">Public-evidence map, not an internally validated application inventory. Product versions, integrations, ownership and data models to be confirmed during discovery. This section is explanatory and does not drive the recommendation below.</div>
+      </div>
+    </div>
+  </section>
   <section class="card">
     <label for="order">Choose an incoming order</label>
     <select id="order" aria-label="Choose an incoming order"></select>
@@ -443,6 +520,11 @@ async function init(){
   } catch (e) { showError(e.message); }
 }
 init();
+
+document.getElementById('landbtn').addEventListener('click', function(){
+  var b=document.getElementById('landbody'), h=b.style.display==='none';
+  b.style.display=h?'':'none'; this.textContent=h?'Hide':'Show';
+});
 </script>
 </body>
 </html>
